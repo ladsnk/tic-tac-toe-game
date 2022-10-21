@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url(./images/top-bg.svg), url(./images/bottom-bg.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: left -500px top -50px, right -500px bottom 0px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  border: 3px solid #1ebbf0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #1ebbf0;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #1ebbf0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2.5rem;
+  padding: 0.9rem 1.5rem;
+  transition: all 250ms;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background-color: #51cbf4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+button:active {
+  background-color: #1ebbf0;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.fa-x,
+.fa-circle {
+  font-size: 5rem;
+  color: rgb(107, 117, 123);
+}
+
+.fa-circle {
+  color: rgb(217, 217, 243);
+}
+
+.result-message {
+  display: none;
+  font-size: 4rem;
+  color: #1ebbf0;
+  margin-bottom: 2.5rem;
+  position: absolute;
+  margin-bottom: 33rem;
+}
+.result-message .fa-x,
+.result-message .fa-circle {
+  margin-right: 1rem;
+}
+
+.show {
+  display: flex;
+}
+
+.game-over {
+  pointer-events: none;
+}
